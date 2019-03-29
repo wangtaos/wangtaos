@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="MinHow,MinHow's Blog">
+  
+  <meta name="description" content="JAVA面向对象初步认识最近才开始学的面向对象，对面向对象也有了一个初步的理解。因为面向对象里涉及很多知识点，学好面向对象也需要很长的时间。所以在这简单写一下面向对象的类，对象，构造方法，包的概念以及面向对象的三大基本特征。 类概念程序中类，是按照固定的格式，对对象的特征和行为进行的定义，定义成一个相应的模板。程序中类由2个部分组成：1.属性(对象的特征) 2.方法（对象的行为） 类的定义包括类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/03/29/java/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JAVA面向对象初步认识最近才开始学的面向对象，对面向对象也有了一个初步的理解。因为面向对象里涉及很多知识点，学好面向对象也需要很长的时间。所以在这简单写一下面向对象的类，对象，构造方法，包的概念以及面向对象的三大基本特征。 类概念程序中类，是按照固定的格式，对对象的特征和行为进行的定义，定义成一个相应的模板。程序中类由2个部分组成：1.属性(对象的特征) 2.方法（对象的行为） 类的定义包括类">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-29T12:48:34.297Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="JAVA面向对象初步认识最近才开始学的面向对象，对面向对象也有了一个初步的理解。因为面向对象里涉及很多知识点，学好面向对象也需要很长的时间。所以在这简单写一下面向对象的类，对象，构造方法，包的概念以及面向对象的三大基本特征。 类概念程序中类，是按照固定的格式，对对象的特征和行为进行的定义，定义成一个相应的模板。程序中类由2个部分组成：1.属性(对象的特征) 2.方法（对象的行为） 类的定义包括类">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">MinHow&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        MinHow&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//minhow.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/wongminho">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-java" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <hr>
+<h2 id="JAVA面向对象初步认识"><a href="#JAVA面向对象初步认识" class="headerlink" title="JAVA面向对象初步认识"></a>JAVA面向对象初步认识</h2><p>最近才开始学的面向对象，对面向对象也有了一个初步的理解。因为面向对象里涉及很多知识点，学好面向对象也需要很长的时间。所以在这简单写一下面向对象的类，对象，构造方法，包的概念以及面向对象的三大基本特征。</p>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>程序中类，是按照固定的格式，对对象的特征和行为进行的定义，定义成一个相应的模板。<br>程序中类由2个部分组成：1.属性(对象的特征) 2.方法（对象的行为）</p>
+<h3 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h3><p>包括类的声明和类体，基本格式如下，</p>
+<pre class=" language-java"><code class="language-java">     <span class="token keyword">class</span>
+    类名<span class="token punctuation">{</span>
+      类体
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>例如在这个地球上，每个国家可以组成一个大类，还有不同人种也可以组成一个类。</p>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>对象是具体的，实际的，代表一个事物。例如：车是一个类，汽车，自行车就是他的对象。</p>
+<h3 id="对象的声明"><a href="#对象的声明" class="headerlink" title="对象的声明"></a>对象的声明</h3><p>类名 对象名</p>
+<h3 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h3><p>类名 对象名=new 类名()；new是用来给对象分配空间的。</p>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.构造方法必须要和类名相同。</p>
+<p>2.没有返回值，不能被继承。</p>
+<p>3.构造方法不用自己调用，在创建对象的过程中系统会自动调用构造方法</p>
+<p>4.当你没有创建构造方法时，系统会帮你自动创建一个无参的构造方法。如过你已经创建构造方法，则系统不会再帮你创建。如要使用无参的构造方法，则要自己创建。</p>
+<p>5.构造方法用来初始化对象。</p>
+<pre class=" language-java"><code class="language-java">        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">people</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>x<span class="token operator">=</span>x<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>y<span class="token operator">=</span>y<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="包-package"><a href="#包-package" class="headerlink" title="包(package)"></a>包(package)</h2><h3 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h3><p>1.包一般是类前面的第一行非注释形语句</p>
+<p>2.域名倒着写即可，再加上模块名，便于内部管理类。</p>
+<h1 id="面向对象的三大基本特征"><a href="#面向对象的三大基本特征" class="headerlink" title="面向对象的三大基本特征"></a>面向对象的三大基本特征</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>所谓封装，也就是把客观事物封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。封装是面向对象的特征之一，是对象和类概念的主要特性。也就是可以把类或类中的数据和方法定义为public,private,protected。把一些不想让别人看到的东西隐藏起来，将某些东西公开来。</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>继承就是让一个对象继承另一个对象的属性和方法，它支持按级分类的概念。被继承的称为基类或父类，继承者称为子类。java中类不能被多继承，但是可以通过接口等来间接实现多继承。</p>
+<pre class=" language-java"><code class="language-java">    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">People</span> <span class="token punctuation">{</span>
+        String name<span class="token operator">=</span><span class="token string">"王"</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"工作"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">class</span> <span class="token class-name">Son</span> <span class="token keyword">extends</span> <span class="token class-name">People</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token function">Son</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token operator">=</span>name<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token operator">=</span>age<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"学习"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>所谓多态就是指一个类实例的相同方法在不同情形有不同表现形式。多态机制使具有不同内部结构的对象可以共享相同的外部接口。这意味着，虽然针对不同对象的具体操作不同，但通过一个公共的类，它们（那些操作）可以通过相同的方式予以调用。</p>
+<p>目前刚刚进入多态的学习，之了解了多态的内存分析，接口。后面还有很多知识为开始学习。</p>
+<h1 id="本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！"><a href="#本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！" class="headerlink" title="本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！"></a>本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！</h1>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年03月29日 20:48</p>
+        <p>原始链接： <a class="post-url" href="/2019/03/29/java/" title>http://yoursite.com/2019/03/29/java/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="John Doe">
+                John Doe
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/29/java/&title=Hexo&pic=http://yoursite.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/29/java/&title=Hexo&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/29/java/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Hexo&url=http://yoursite.com/2019/03/29/java/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/29/java/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/03/29/java/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JAVA面向对象初步认识"><span class="post-toc-text">JAVA面向对象初步认识</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类"><span class="post-toc-text">类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概念"><span class="post-toc-text">概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类的定义"><span class="post-toc-text">类的定义</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对象"><span class="post-toc-text">对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义"><span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对象的声明"><span class="post-toc-text">对象的声明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对象的创建"><span class="post-toc-text">对象的创建</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#构造方法"><span class="post-toc-text">构造方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特点"><span class="post-toc-text">特点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#包-package"><span class="post-toc-text">包(package)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#命名规则"><span class="post-toc-text">命名规则</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#面向对象的三大基本特征"><span class="post-toc-text">面向对象的三大基本特征</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#封装"><span class="post-toc-text">封装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#继承"><span class="post-toc-text">继承</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多态"><span class="post-toc-text">多态</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！"><span class="post-toc-text">本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！</span></a>
+        </li></nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Hello World</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 John Doe<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
