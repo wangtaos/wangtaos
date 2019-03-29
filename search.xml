@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/2019/03/29/java/"/>
+      <url>/2019/03/29/java/</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="title-JAVA面向对象初步认识"><a href="#title-JAVA面向对象初步认识" class="headerlink" title="title:JAVA面向对象初步认识"></a>title:JAVA面向对象初步认识</h2><p>最近才开始学的面向对象，对面向对象也有了一个初步的理解。因为面向对象里涉及很多知识点，学好面向对象也需要很长的时间。所以在这简单写一下面向对象的类，对象，构造方法，包的概念以及面向对象的三大基本特征。</p><h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>程序中类，是按照固定的格式，对对象的特征和行为进行的定义，定义成一个相应的模板。<br>程序中类由2个部分组成：1.属性(对象的特征) 2.方法（对象的行为）</p><h3 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h3><p>包括类的声明和类体，基本格式如下，</p><pre><code class="class">类名{      类体};</code></pre><p>例如在这个地球上，每个国家可以组成一个大类，还有不同人种也可以组成一个类。</p><h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>对象是具体的，实际的，代表一个事物。例如：车是一个类，汽车，自行车就是他的对象。</p><h3 id="对象的声明"><a href="#对象的声明" class="headerlink" title="对象的声明"></a>对象的声明</h3><p>类名 对象名</p><h3 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h3><p>类名 对象名=new 类名()；new是用来给对象分配空间的。</p><h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.构造方法必须要和类名相同。</p><p>2.没有返回值，不能被继承。</p><p>3.构造方法不用自己调用，在创建对象的过程中系统会自动调用构造方法</p><p>4.当你没有创建构造方法时，系统会帮你自动创建一个无参的构造方法。如过你已经创建构造方法，则系统不会再帮你创建。如要使用无参的构造方法，则要自己创建。</p><p>5.构造方法用来初始化对象。</p><pre><code>    public void people(int x,int y){this.x=x;this.y=y;}</code></pre><h2 id="包-package"><a href="#包-package" class="headerlink" title="包(package)"></a>包(package)</h2><h3 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h3><p>1.包一般是类前面的第一行非注释形语句</p><p>2.域名倒着写即可，再加上模块名，便于内部管理类。</p><h1 id="面向对象的三大基本特征"><a href="#面向对象的三大基本特征" class="headerlink" title="面向对象的三大基本特征"></a>面向对象的三大基本特征</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>所谓封装，也就是把客观事物封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。封装是面向对象的特征之一，是对象和类概念的主要特性。也就是可以把类或类中的数据和方法定义为public,private,protected。把一些不想让别人看到的东西隐藏起来，将某些东西公开来。</p><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>继承就是让一个对象继承另一个对象的属性和方法，它支持按级分类的概念。被继承的称为基类或父类，继承者称为子类。java中类不能被多继承，但是可以通过接口等来间接实现多继承。</p><pre><code>public class People {    String name=&quot;王&quot;;    public void work() {        System.out.println(&quot;工作&quot;);    }}class Son extends People{    int age;    public Son() {        this.name=name;        this.age=age;    }    public void work() {        System.out.println(&quot;学习&quot;);    }}</code></pre><h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>所谓多态就是指一个类实例的相同方法在不同情形有不同表现形式。多态机制使具有不同内部结构的对象可以共享相同的外部接口。这意味着，虽然针对不同对象的具体操作不同，但通过一个公共的类，它们（那些操作）可以通过相同的方式予以调用。</p><p>目前刚刚进入多态的学习，之了解了多态的内存分析，接口。后面还有很多知识为开始学习。</p><h1 id="本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！"><a href="#本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！" class="headerlink" title="本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！"></a>本人是Java的初学者，如有错误之处请大家指出，谢谢！！！！！</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/03/23/hello-world/"/>
+      <url>/2019/03/23/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
